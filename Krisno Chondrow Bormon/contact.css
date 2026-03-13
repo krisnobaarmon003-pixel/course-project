@@ -1,0 +1,124 @@
+/* Container constraints */
+.carousel-container {
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #121212; /* Dark theme base */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* The scrollable track */
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for a cleaner look */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual slides */
+.carousel-slide {
+  flex: 0 0 100%; /* Each slide takes 100% of the container width */
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Maintains consistent height */
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption styling */
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+}
+
+.main-footer {
+  background-color: #121212; /* Deep dark background */
+  color: #e0e0e0;
+  padding: 60px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #333; /* Subtle separation line */
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to wrap on mobile */
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1; /* Each section takes equal space */
+  min-width: 250px; /* Forces wrap on smaller screens */
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.footer-logo span {
+  color: #00adb5; /* High-contrast accent color */
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #00adb5; /* Changes color on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
