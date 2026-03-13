@@ -1,4 +1,0 @@
-# course-project
-Hello
-World 
-!
